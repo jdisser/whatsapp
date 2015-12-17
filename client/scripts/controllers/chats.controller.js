@@ -4,10 +4,10 @@ angular
   .controller('ChatsCtrl', ChatsCtrl);
 
 function ChatsCtrl ($scope, $reactive) {
-  $reactive(this).attach($scope);
-}
 
-this.data = [
+  $reactive(this).attach($scope);
+
+  this.data = [
     {
       _id: 0,
       name: 'Ethan Gonzalez',
@@ -54,4 +54,5 @@ this.data = [
       }
     }
   ];
+
 }
