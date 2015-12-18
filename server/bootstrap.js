@@ -25,10 +25,33 @@ Meteor.startup(function () {
       timestamp: moment().subtract(2, 'weeks').toDate()
     }
   ];
-
+  // console.log(messages);
   messages.forEach((m) => {
     Messages.insert(m);
   });
+
+  let chats = [
+    {
+      name: 'Ethan Gonzalez',
+      picture: 'https://randomuser.me/api/portraits/thumb/men/1.jpg'
+    },
+    {
+      name: 'Bryan Wallace',
+      picture: 'https://randomuser.me/api/portraits/thumb/lego/1.jpg'
+    },
+    {
+      name: 'Avery Stewart',
+      picture: 'https://randomuser.me/api/portraits/thumb/women/1.jpg'
+    },
+    {
+      name: 'Katie Peterson',
+      picture: 'https://randomuser.me/api/portraits/thumb/women/2.jpg'
+    },
+    {
+      name: 'Ray Edwards',
+      picture: 'https://randomuser.me/api/portraits/thumb/men/2.jpg'
+    }
+  ];
 
   chats.forEach((chat) => {
     let message = Messages.findOne({chatId: {$exists: false}})
